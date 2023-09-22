@@ -1,0 +1,38 @@
+using System;
+
+public class PrintTriangleClass
+{
+    public static void Main()
+    {
+        Console.Write("Enter the height of the triangle: ");
+        int height = int.Parse(Console.ReadLine());
+
+        if (height <= 0)
+        {
+            Console.WriteLine("Height should be greater than zero.");
+        }
+        else
+        {
+            Console.WriteLine("Here's your triangle:\n");
+            PrintTriangle(height);
+        }
+    }
+
+    static void PrintTriangle(int height)
+    {
+        for (int i = 1; i <= height; i++)
+        {
+            for (int j = 0; j < height - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < 2 * i - 1; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
